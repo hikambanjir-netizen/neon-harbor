@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Harbor — Port Solano</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three/three.module.min.js" } }
+</script>
+</head>
+<body>
+<div id="app">
+  <canvas id="scene"></canvas>
+  <canvas id="minimap" width="220" height="220"></canvas>
+  <div id="hud">
+    <div id="wanted"></div>
+    <div id="cash">$0</div>
+    <div id="health"><div id="healthbar"></div><span id="healthtext">100</span></div>
+    <div id="speed">0 mph</div>
+    <div id="objective"></div>
+    <div id="missiontitle"></div>
+    <div id="prompt"></div>
+    <div id="toast"></div>
+    <div id="clock">DAY 1 · 09:00</div>
+    <div id="crosshair">+</div>
+  </div>
+  <div id="startscreen">
+    <div class="panel">
+      <h1>NEON HARBOR</h1>
+      <h2>Port Solano</h2>
+      <p class="tagline">Mara Voss drove getaway for the wrong people. Now the whole
+      city owes her one last job — and the Port Solano police want her off the road for good.</p>
+      <p class="story">A sun-soaked open-world crime game. Steal cars, outrun the law,
+      and run three story jobs for fixer Dario Kess. Every building, car, name and
+      note of music in this city is original.</p>
+      <div class="controls">
+        <div><b>W A S D</b> move / drive</div>
+        <div><b>Mouse</b> look &nbsp;·&nbsp; <b>Click</b> shoot</div>
+        <div><b>E</b> enter / steal car &nbsp;·&nbsp; <b>Shift</b> sprint</div>
+        <div><b>Space</b> handbrake &nbsp;·&nbsp; <b>P</b> pause &nbsp;·&nbsp; <b>M</b> mute</div>
+      </div>
+      <button id="playbtn">START ENGINE</button>
+      <button id="continuebtn">CONTINUE (SAVE)</button>
+      <p class="hint">Save: progress is stored in your browser (localStorage). No network, no account.</p>
+    </div>
+  </div>
+  <div id="pausescreen" class="hidden">
+    <div class="panel">
+      <h1>PAUSED</h1>
+      <p id="pausestats"></p>
+      <button id="resumebtn">RESUME</button>
+      <button id="savebtn">SAVE GAME</button>
+      <button id="quitbtn">QUIT TO TITLE</button>
+    </div>
+  </div>
+  <div id="busted" class="hidden"><div class="panel"><h1>BUSTED</h1><p>The Port Solano police took you in. Dario posted bail — it cost you $250.</p><button id="bustedbtn">BACK ON THE STREET</button></div></div>
+  <div id="wasted" class="hidden"><div class="panel"><h1>FLATLINED</h1><p>You woke up at St. Anselm's with a $150 bill and a headache.</p><button id="wastedbtn">GET UP</button></div></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
